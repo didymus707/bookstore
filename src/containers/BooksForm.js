@@ -1,13 +1,20 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
 
 const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
 const BooksForm = () => {
-  const [input, setInput] = useState('');
+  const [form, setState] = useState({
+    title: '',
+    select: categories[0],
+  });
 
-  const handleInput = (e) => setInput(e.target.value);
+  const handleChange = (e) => setState({
+    ...form,
+    [e.target.name]: e.target.value,
+  });
+
+  const handleSubmit = (e) => e.target.value;
 
   return (
     <>
@@ -17,13 +24,17 @@ const BooksForm = () => {
           name="title"
           id="title"
           placeholder="Title"
-          value={input}
-          onChange={(e) => handleInput(e)}
+          value={form.title}
+          onChange={(e) => handleChange(e)}
         />
         <select name="category" id="category">
           {categories.map((category, id) => <option key={id}>{category}</option>)}
         </select>
-        <input type="submit" value="Submit" />
+        <input
+          type="submit"
+          value="Submit"
+          onClick={(e) => handleSubmit(e)}
+        />
       </form>
     </>
   );
