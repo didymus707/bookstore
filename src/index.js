@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import booksReducer from './redux/reducers/books';
 import App from './App';
 
-const store = createStore();
+const store = createStore(booksReducer);
 
 ReactDOM.render(
   <React.StrictMode>
