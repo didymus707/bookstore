@@ -34,7 +34,7 @@ const BooksForm = ({ createBook }) => {
     createBook(book);
     setState({
       title: '',
-      category: '',
+      category: 'Action',
     });
   };
 
@@ -49,7 +49,7 @@ const BooksForm = ({ createBook }) => {
           value={form.title}
           onChange={(e) => handleChange(e)}
         />
-        <select name="category" id="category" onChange={(e) => handleChange(e)}>
+        <select name="category" id="category" value={form.category} onChange={(e) => handleChange(e)}>
           {categories.map((category, id) => (
             <option key={id}>{category}</option>
           ))}
