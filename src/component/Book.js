@@ -1,18 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { createBook } from '../redux/actions';
 
-const Book = ({ id, title, category }) => (
+const Book = ({ books }) => (
   <>
-    <td>{id}</td>
-    <td>{title}</td>
-    <td>{category}</td>
+    {books.map((book) => (
+      <tr key={book.id}>
+        <td>{book.id}</td>
+        <td>{book.title}</td>
+        <td>{book.category}</td>
+      </tr>
+    ))}
   </>
 );
 
 Book.propTypes = {
-  id: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
+  books: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
-export default Book;
+const mapStateToProps = (state) => ({
+  books: state.booksReducer,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  createBook: (book) => dispatch(createBook(book)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Book);
