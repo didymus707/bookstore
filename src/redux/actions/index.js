@@ -8,7 +8,7 @@ export const createBook = (book) => ({
   payload: {
     id: ++bookId,
     title: book.title,
-    catefory: book.category,
+    category: book.category,
   },
 });
 
