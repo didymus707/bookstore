@@ -14,5 +14,5 @@ export const createBook = (book) => ({
 
 export const removeBook = (book) => ({
   type: types.REMOVE_BOOK,
-  payload: { id: book.id },
+  payload: book.id,
 });
