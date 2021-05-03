@@ -32,6 +32,10 @@ const BooksForm = ({ createBook }) => {
       category: form.category,
     };
     createBook(book);
+    setState({
+      title: '',
+      category: '',
+    });
   };
 
   return (
