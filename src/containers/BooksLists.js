@@ -10,8 +10,8 @@ const BooksList = ({ removeBook, changeFilter }) => {
     removeBook(book);
   };
 
-  const handleFilterChange = (filter) => {
-    changeFilter(filter);
+  const handleFilterChange = (val) => {
+    changeFilter(val);
   };
 
   return (

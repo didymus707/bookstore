@@ -1,5 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const categories = [
   'All',
@@ -12,10 +13,13 @@ const categories = [
   'Sci-Fi',
 ];
 
-const CategoryFilter = () => {
+const CategoryFilter = ({ filterBook }) => {
   const [value, setValue] = useState('All');
 
-  const handleSelect = (e) => setValue(e.target.value);
+  const handleSelect = (e) => {
+    setValue(e.target.value);
+    filterBook(e.target.value);
+  };
 
   return (
     <>
@@ -28,6 +32,10 @@ const CategoryFilter = () => {
       </form>
     </>
   );
+};
+
+CategoryFilter.propTypes = {
+  filterBook: PropTypes.func.isRequired,
 };
 
 export default CategoryFilter;
