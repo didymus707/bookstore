@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 
 const categories = [
+  'All',
   'Action',
   'Biography',
   'History',
@@ -14,9 +15,7 @@ const categories = [
 const CategoryFilter = () => {
   const [value, setValue] = useState('All');
 
-  const handleSelect = (e) => {
-    setValue(e.target.value);
-  };
+  const handleSelect = (e) => setValue(e.target.value);
 
   return (
     <>
