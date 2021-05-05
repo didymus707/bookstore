@@ -16,3 +16,8 @@ export const removeBook = (book) => ({
   type: types.REMOVE_BOOK,
   payload: book.id,
 });
+
+export const changeFilter = (filter) => ({
+  type: types.CHANGE_FILTER,
+  payload: filter,
+});
