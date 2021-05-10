@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Header = () => (
-  <nav>
-    <ul>
+  <nav className="nav">
+    <ul className="list">
       <li>Bookstore CMS</li>
-      <li>Books</li>
-      <li>Categories</li>
+      <li>BOOKS</li>
+      <li>CATEGORIES</li>
     </ul>
     <div className="icon">Person icon</div>
   </nav>

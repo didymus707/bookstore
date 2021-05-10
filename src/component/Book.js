@@ -12,6 +12,7 @@ const Book = ({ books, deleteBook, filter }) => (
           <td>{book.category}</td>
           <td>
             <button
+              className="button"
               type="button"
               onClick={() => deleteBook(book)}
             >
@@ -27,6 +28,7 @@ const Book = ({ books, deleteBook, filter }) => (
           <td>{book.category}</td>
           <td>
             <button
+              className="button"
               type="button"
               onClick={() => deleteBook(book)}
             >

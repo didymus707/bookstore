@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 .App {
   text-align: center;
 }
@@ -10,6 +12,54 @@
 .container {
   display: flex;
   justify-content: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  margin: 0 0 38px;
+  padding: 23px 99px 27px 30px;
+  border-bottom: solid 1px #e8e8e8;
+  box-shadow: rgb(0 0 0 / 10%) 0px 1px 3px 0px, rgb(0 0 0 / 6%) 0px 1px 2px 0px;
+}
+
+.list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.list li {
+  font-size: 13px;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.list li:first-of-type {
+  color: #0290ff;
+  font-size: 30px;
+}
+
+.list li:nth-of-type(3) {
+  opacity: 0.5;
+}
+
+.icon {
+  margin-left: auto;
+}
+
+.button {
+  background-color: 0290ff;
+  color: #fff;
+  font-family: RobotoSlab;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
