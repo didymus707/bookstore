@@ -6,35 +6,80 @@ const Book = ({ books, deleteBook, filter }) => (
   <>
     {filter
       ? books.filter((book) => book.category === filter).map((book) => (
-        <tr key={book.id}>
-          <td>{book.title}</td>
-          <td>{book.category}</td>
-          <td>
-            <button
-              className="button"
-              type="button"
-              onClick={() => deleteBook(book)}
-            >
-              Remove Book
-            </button>
-          </td>
-        </tr>
+        <div key={book.id}>
+          <div className="each-book">
+            <div className="book">
+              <ul className="top-section">
+                <li>
+                  <small>{book.category}</small>
+                </li>
+                <li>{book.title}</li>
+                <li>Jane Doe</li>
+              </ul>
+              <ul className="bottom-section">
+                <li>Comments</li>
+                <li>
+                  <button
+                    className="btn-text"
+                    type="button"
+                    onClick={() => deleteBook(book)}
+                  >
+                    Remove
+                  </button>
+                </li>
+                <li>Edit</li>
+              </ul>
+            </div>
+            <div className="progress-bar">
+              progress circle
+            </div>
+            <div className="update-progress">
+              <ul className="chapter">
+                <li>CURRENT CHAPTER</li>
+                <li>CHAPTER 17</li>
+              </ul>
+              <button type="submit" className="update">UPDATE PROGRESS</button>
+            </div>
+          </div>
+        </div>
       ))
       : books.map((book) => (
-        <tr key={book.id}>
-          <td>{book.id}</td>
-          <td>{book.title}</td>
-          <td>{book.category}</td>
-          <td>
-            <button
-              className="button"
-              type="button"
-              onClick={() => deleteBook(book)}
-            >
-              Remove Book
-            </button>
-          </td>
-        </tr>
+        <div key={book.id}>
+          <div className="each-book">
+            <div className="book">
+              <ul className="top-section">
+                <li>
+                  <small>{book.category}</small>
+                </li>
+                <li>{book.title}</li>
+                <li>Jane Doe</li>
+              </ul>
+              <ul className="bottom-section">
+                <li>Comments</li>
+                <li>
+                  <button
+                    className="btn-text"
+                    type="button"
+                    onClick={() => deleteBook(book)}
+                  >
+                    Remove
+                  </button>
+                </li>
+                <li>Edit</li>
+              </ul>
+            </div>
+            <div className="progress-bar">
+              progress circle
+            </div>
+            <div className="update-progress">
+              <ul className="chapter">
+                <li>CURRENT CHAPTER</li>
+                <li>CHAPTER 17</li>
+              </ul>
+              <button type="submit" className="update">UPDATE PROGRESS</button>
+            </div>
+          </div>
+        </div>
       ))}
   </>
 );

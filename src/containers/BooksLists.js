@@ -17,18 +17,7 @@ const BooksList = ({ removeBook, changeFilter }) => {
   return (
     <div className="container">
       <CategoryFilter filterBook={handleFilterChange} />
-      <table>
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Category</th>
-            <th>Remove Book</th>
-          </tr>
-        </thead>
-        <tbody>
-          <Book deleteBook={handleRemoveBook} />
-        </tbody>
-      </table>
+      <Book deleteBook={handleRemoveBook} />
     </div>
   );
 };
