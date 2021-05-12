@@ -14,7 +14,6 @@ const Header = () => (
     <ul className="list">
       <li>Bookstore CMS</li>
       <li>BOOKS</li>
-      <li>CATEGORIES</li>
     </ul>
     <div className="icon">
       <GoPerson style={styles} />

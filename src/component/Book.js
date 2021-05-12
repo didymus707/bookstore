@@ -7,7 +7,6 @@ const Book = ({ books, deleteBook, filter }) => (
     {filter
       ? books.filter((book) => book.category === filter).map((book) => (
         <tr key={book.id}>
-          <td>{book.id}</td>
           <td>{book.title}</td>
           <td>{book.category}</td>
           <td>

@@ -9,11 +9,6 @@
   pointer-events: none;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-}
-
 .nav {
   display: flex;
   align-items: center;
@@ -28,7 +23,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 45%;
+  width: 32%;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -43,7 +38,19 @@
   font-size: 30px;
 }
 
-.list li:nth-of-type(3) {
+.select {
+  position: absolute;
+  top: 46px;
+  left: 40%;
+}
+
+.select select {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: #121212;
+  letter-spacing: 1.9px;
+  width: 130px;
+  padding: 2px;
   opacity: 0.5;
 }
 

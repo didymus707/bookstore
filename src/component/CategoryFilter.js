@@ -23,7 +23,7 @@ const CategoryFilter = ({ filterBook }) => {
 
   return (
     <>
-      <form>
+      <form className="select">
         <select name="category" id="category" value={value} onChange={(e) => handleSelect(e)}>
           {categories.map((category, id) => (
             <option key={id}>{category}</option>

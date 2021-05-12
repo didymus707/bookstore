@@ -20,7 +20,6 @@ const BooksList = ({ removeBook, changeFilter }) => {
       <table>
         <thead>
           <tr>
-            <th>Id</th>
             <th>Title</th>
             <th>Category</th>
             <th>Remove Book</th>
