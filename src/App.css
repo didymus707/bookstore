@@ -177,6 +177,7 @@
   margin: 0 auto;
   border-top: 2px solid #e8e8e8;
   margin-top: 77px;
+  margin-bottom: 50px;
 }
 
 .add-new-section form {
@@ -200,6 +201,10 @@
 .add-new-section select {
   width: 20%;
   background-color: white;
+}
+
+.add-new-section input[type=text]:focus, .add-new-section select:focus {
+  outline: 1px solid #37434d;
 }
 
 .add-new-section input[type=submit] {
