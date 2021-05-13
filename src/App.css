@@ -132,6 +132,52 @@
   font-size: 14px;
 }
 
+/* progress circle */
+.progress-bar {
+  display: flex;
+}
+
+.percent,
+.svg,
+circle {
+  width: 90px;
+  height: 89px;
+}
+
+circle {
+  position: absolute;
+  fill: none;
+  stroke-width: 7;
+  transform: translate(10px, 10px); /* This is to position it in the center */
+  stroke-dasharray: 300;
+  stroke-linecap: round;
+}
+
+circle:nth-child(1) {
+  stroke-dashoffset: 0;
+  stroke: #c4c4c4;
+}
+
+.percent circle:nth-child(2) {
+  stroke: #0290ff;
+  stroke-dashoffset: calc(440 - (440 * 68) / 100);
+}
+
+.val {
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 11px;
+}
+
+.val li:first-of-type {
+  font-size: 32px;
+}
+
+.val li:last-of-type {
+  font-size: 14px;
+  opacity: 0.5;
+}
+
 .update-progress {
   font-family: 'Roboto Slab', serif;
   font-size: 13px;
@@ -203,7 +249,8 @@
   background-color: white;
 }
 
-.add-new-section input[type=text]:focus, .add-new-section select:focus {
+.add-new-section input[type=text]:focus,
+.add-new-section select:focus {
   outline: 1px solid #37434d;
 }
 

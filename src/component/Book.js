@@ -69,7 +69,18 @@ const Book = ({ books, deleteBook, filter }) => (
               </ul>
             </div>
             <div className="progress-bar">
-              progress circle
+              <div className="rings">
+                <div className="percent">
+                  <svg className="svg">
+                    <circle cx="37" cy="37" r="37" />
+                    <circle cx="37" cy="37" r="37" />
+                  </svg>
+                </div>
+              </div>
+              <ul className="val">
+                <li>68%</li>
+                <li>Completed</li>
+              </ul>
             </div>
             <div className="update-progress">
               <ul className="chapter">
