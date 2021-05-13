@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto+Slab:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto+Slab:wght@300;700&display=swap');
 
 /* .App {
   text-align: center;
@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
   margin: 0 0 38px;
-  padding: 23px 99px 27px 100px;
+  padding: 23px 140px 27px 100px;
   border-bottom: solid 1px #e8e8e8;
   box-shadow: rgb(0 0 0 / 10%) 0 1px 3px 0, rgb(0 0 0 / 6%) 0 1px 2px 0;
 }
@@ -59,7 +59,7 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1075px;
   margin: 0 auto;
 }
 
@@ -76,7 +76,7 @@
   align-items: center;
   margin: 15px;
   padding: 20px 0;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
 }
 
 .top-section {
@@ -102,6 +102,7 @@
   margin-top: 4px;
   font-family: 'Roboto Slab', serif;
   font-size: 22px;
+  font-weight: 700;
 }
 
 .top-section li:nth-of-type(3),
@@ -109,11 +110,10 @@
 .btn-text {
   color: #4386bf;
   font-family: 'Roboto Slab', serif;
-  /* opacity: 0.6; */
 }
 
 .bottom-section {
-  width: 65%;
+  width: 58%;
   margin: 0;
 }
 
@@ -130,6 +130,84 @@
   border: none;
   background: none;
   font-size: 14px;
+}
+
+.update-progress {
+  font-family: 'Roboto Slab', serif;
+  font-size: 13px;
+  padding-right: 48px;
+  position: relative;
+}
+
+.update-progress::before {
+  content: '';
+  border-left: 2px solid #e8e8e8;
+  position: absolute;
+  top: 33px;
+  left: -81px;
+  height: 45px;
+}
+
+.chapter {
+  padding: 0;
+  flex-direction: column;
+  color: #121212;
+}
+
+.chapter li:first-of-type {
+  opacity: 0.5;
+}
+
+.chapter li:nth-of-type(2) {
+  font-size: 16px;
+}
+
+.update {
+  background: #0290ff;
+  border: none;
+  color: #f5f6fa;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  width: 180px;
+}
+
+.add-new-section {
+  max-width: 1044px;
+  margin: 0 auto;
+  border-top: 2px solid #e8e8e8;
+  margin-top: 77px;
+}
+
+.add-new-section form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-new-section form > * {
+  border: 1px solid #e8e8e8;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #c4c4c4;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.add-new-section input[type=text] {
+  width: 55%;
+}
+
+.add-new-section select {
+  width: 20%;
+  background-color: white;
+}
+
+.add-new-section input[type=submit] {
+  width: 15%;
+  background-color: #0290ff;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
 }
 
 @media (prefers-reduced-motion: no-preference) {
