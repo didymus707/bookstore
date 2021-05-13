@@ -40,22 +40,25 @@ const BooksForm = ({ createBook }) => {
 
   return (
     <>
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <input
-          type="text"
-          name="title"
-          id="title"
-          placeholder="Title"
-          value={form.title}
-          onChange={(e) => handleChange(e)}
-        />
-        <select name="category" id="category" value={form.category} onChange={(e) => handleChange(e)}>
-          {categories.map((category, id) => (
-            <option key={id}>{category}</option>
-          ))}
-        </select>
-        <input type="submit" value="Submit" />
-      </form>
+      <div className="add-new-section">
+        <h3>Add New Book</h3>
+        <form onSubmit={(e) => handleSubmit(e)}>
+          <input
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Title"
+            value={form.title}
+            onChange={(e) => handleChange(e)}
+          />
+          <select name="category" id="category" value={form.category} onChange={(e) => handleChange(e)}>
+            {categories.map((category, id) => (
+              <option key={id}>{category}</option>
+            ))}
+          </select>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
     </>
   );
 };
